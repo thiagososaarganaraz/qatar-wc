@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Roboto+Condensed:wght@300&display=swap');
+
+@font-face {
+  font-family: Qatar2022;
+  src: local("Qatar2022Arabic-Bold"),
+  local("Qatar2022Arabic-Bold"),
+  url('../assets/fonts/Qatar2022Arabic-Bold.ttf');
+  font-weight: bold;
+}
+
+h1{
+  font-family: Qatar2022;
+  text-align: center;
+  padding: 2rem;
+}
+
+.teamContainer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.teamCard{
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.teamName{
+  list-style: none;
+  text-decoration: none;
+  font-family: verdana;
+  text-align: center;
+  font-family: Qatar2022;
+  cursor: pointer;
+}
+
+.teamFlag{
+  text-align: center;
+  height: 60%;
+}
+
+.teamFlag img{
+  height: 100%;
+  width: 40%;
+}
+
+.teamGroup{
+  text-align: center;
+  width: 100%;
+}

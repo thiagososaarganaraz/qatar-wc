@@ -1,0 +1,94 @@
+.slider-container{
+  width: 80%;
+  height: 560px;
+  margin: 0.5rem auto;
+}
+
+.carousel-container{
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.carousel-item{
+  height: 100%;
+}
+
+.carousel-card{
+  height: 100%;
+  animation-name: transicion;
+  animation-duration: 70s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes transicion {
+  0%{
+    background-image: url('../assets/img1.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  10%{
+    background-image: url('../assets/img2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  20%{
+    background-image: url('../assets/img3.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  30%{
+    background-image: url('../assets/img4.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  40%{
+    background-image: url('../assets/img5.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  50%{
+    background-image: url('../assets/img6.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  60%{
+    background-image: url('../assets/img7.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  70%{
+    background-image: url('../assets/img8.png');
+    background-size: cover;
+    background-position: center;
+  }
+  80%{
+    background-image: url('../assets/img9.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  90%{
+    background-image: url('../assets/img10.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  100%{
+    background-image: url('../assets/img11.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.carousel-arrows{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}

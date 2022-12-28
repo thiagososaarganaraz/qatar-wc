@@ -1,0 +1,205 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Roboto+Condensed:wght@300&display=swap');
+
+@font-face {
+  font-family: Qatar2022;
+  src: local("Qatar2022Arabic-Bold"),
+  local("Qatar2022Arabic-Bold"),
+  url('../assets/fonts/Qatar2022Arabic-Bold.ttf');
+  font-weight: bold;
+}
+
+body{
+  background-color: #0A1929;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: #0A1929;
+  color: white;
+  height: 100%;
+}
+
+/* NAVBAR */
+
+header{
+  width: 100%;
+  display: flex;
+}
+
+.header-nav{
+  background-color: #0A1929;
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  border-bottom:1px solid #999;
+}
+
+.nav-menu{
+  flex: 1;
+}
+
+.nav-logo{
+  flex: 1;
+  width: 130px;
+}
+
+.nav-logo img{
+  width: 130px;
+}
+
+header a{
+  text-decoration: none;
+}
+
+.header-nav-right ul{
+  display: flex;
+}
+
+.header-nav-right li{
+  list-style: none;
+  flex: 1;
+  text-align: center;
+}
+
+.header-nav-right a{
+  font-family: "Qatar2022";
+  font-weight: bold;
+  color: #9B072E;
+}
+
+.header-nav-right a:hover{
+  animation-name: difuminate;
+  animation-duration: 2s;
+}
+
+@keyframes difuminate{
+  50%{
+    color: #555;
+  }
+  100%{
+    color: #AAA
+  }
+}
+
+.header-nav a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-nav-left{
+  flex: 7;
+  margin: 0 1rem;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+
+
+.header-nav-right{
+  flex: 3;
+}
+
+/* SECCIÓN PRINCIPAL */
+
+.principal{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+}
+
+.principal h2{
+  font-family: "Qatar2022";
+  font-weight: bold;
+}
+
+.principal-one{
+  flex: 3;
+  flex-direction: column;
+}
+
+aside{
+  flex: 1;
+  background-color: #0A1929;
+}
+  
+.title{
+  width: 600px;
+  margin: 2rem auto;
+}
+
+.title img{
+  width: 100%;
+}
+
+.principal h2{
+  font-size: 45px;
+}
+
+.principal p{
+  font-size: 22px;
+  font-weight: normal;
+  color: rgb(223, 223, 223);
+}
+
+article{
+  margin: 3rem 4rem;
+}
+
+.article-img{
+  width: 720px;
+  margin: 2rem auto;
+}
+
+.article-img img{
+  width: 100%;
+}
+
+footer{
+  width: 100%;
+}
+
+.footer-contact{
+  font-family: 'Qatar2022';
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-contact h4{
+  margin: 1rem auto;
+
+}
+
+.footer-contact ul{
+  display: flex;
+  flex: 8;
+  justify-content: center;
+  padding: 0;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.footer-contact ul li{
+  list-style: none;
+  justify-content: center;
+  width: 10%;
+}
+
+.footer-contact a{
+  text-decoration: none;
+  color: white;
+}
+
+.world-champions-img{
+  width: 60%;
+}

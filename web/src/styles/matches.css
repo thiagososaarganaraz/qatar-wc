@@ -1,0 +1,102 @@
+.matchContainer{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Qatar2022';
+  width: 60%;
+  margin: 0 auto;
+}
+
+.matchCard{
+  background-color: #03090f;
+  margin: 1rem auto;
+  padding-bottom: 2rem;
+}
+
+.matchCard h4{
+  text-align: center;
+  margin: 1rem;
+}
+
+.group{
+  font-size: 24px;
+  text-decoration-line: underline ;
+}
+
+.matchFlags{
+  display: flex;
+}
+
+.matchTeamNames{
+  display: flex;
+  font-size: 20px;
+}
+
+.matchTeamNames h4{
+  flex: 1;
+  text-align: center;
+}
+
+.matchLocalFlag{
+  display: flex;
+  height: 70px;
+}
+
+.matchAwayFlag{
+  display: flex;
+  height: 70px;
+}
+
+.matchFlags div{
+  align-items: center;
+}
+
+.matchLocalFlag img{
+  margin-left: 8rem;
+  width: 100%;
+}
+
+.matchAwayFlag img{
+  margin-right: 8rem;
+  width: 100%;
+}
+
+.matchScore{
+  display: flex;
+}
+
+.matchElapsedTime{
+  text-align: center;
+  font-size: 18px;
+}
+
+.matchScorers{
+  display: flex;
+}
+
+.matchScorers ul{
+  flex: 1;
+  font-size: 13px;
+  color: #DDD;
+}
+
+.matchScorers ul li{
+  margin: 1rem auto;
+  width: 60%;
+  list-style-type: circle;
+}
+
+.localScorers li{
+  text-align: center;
+}
+
+.matchCenterArea h1{
+  padding: 0 2rem;
+}
+
+.matchCenterArea :nth-child(2){
+  padding: 0;
+}
+
+.awayScorers li{
+  margin-right: 100%;
+}
