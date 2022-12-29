@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import image from '../assets/title.png'
-import image2 from '../assets/campeones.jpg'
 import axios from 'axios';
 import Loading from '../snippets/Loading';
+import '../styles/matches.css'
 
 function Home() {
 
@@ -27,30 +27,33 @@ function Home() {
   const listMatch = () =>{
     return(
     <div className='matchCard' key={match.id}>
-      <h4 className='group'>Ultimo partido</h4>
-      <div className='matchTeamNames'>
-        <h4>{match.home_team_en}</h4>
-        <h4>{match.away_team_en}</h4>
-      </div>
-      <div className='matchFlags'>
-        <div className='matchLocalFlag'><img src={match.home_flag} alt={match.home_team_en}/></div>
+      <h4 className='group'>Last Match</h4>
+      <div className='teams'>
+        <div className='teamContent'>
+          <h4>{match.home_team_en}</h4>
+          <div className='matchLocalFlag'><img src={match.home_flag}/></div>
+          <ul className='localScorers'>
+            {
+            match.home_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.home_scorers[0].split(',')).map((scorer)=><li key={match._id}>{scorer}</li>)
+            }
+          </ul>
+
+        </div>
         <div className='matchCenterArea'>
           <h3 className='matchElapsedTime'>{match.time_elapsed}</h3>
-            <div className='matchScore'>
-              <h1 className='localScore'>{match.home_score}</h1><h1>-</h1><h1 className='awayScore'>{match.away_score}</h1>
-            </div>
+          <div className='matchScore'>
+            <h1 className='localScore'>{match.home_score}</h1><h1>-</h1><h1 className='awayScore'>{match.away_score}</h1>
+          </div>
         </div>
-        <div className='matchAwayFlag'><img src={match.away_flag} alt={match.away_team_en}/></div>
-      </div>
-      <div className='matchScorers'>
-        <ul className='localScorers'>
-          {
-          match.home_scorers[0] === 'null' ? <li style={{listStyle:'none'}}></li> : match.home_scorers.map((scorer)=><li key={match._id}>{scorer}</li>)
-          }
-        </ul>
-        <ul className='awayScorers'>
-          {match.away_scorers[0] === 'null' ? <li style={{listStyle:'none'}}></li> : match.away_scorers.map((scorer)=><li key={match._id}>{scorer}</li>)}
-        </ul>
+        <div className='teamContent'>
+          <h4>{match.away_team_en}</h4>
+          <div className='matchAwayFlag'><img src={match.away_flag}/></div>
+          <ul className='awayScorers'>
+            {
+            match.away_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.away_scorers[0].split(',')).map((scorer)=><li key={match._id}>{scorer}</li>)
+            }
+          </ul>
+        </div>
       </div>
     </div>
     )
@@ -64,7 +67,7 @@ function Home() {
         <div className='title'>
           <img src={image} alt='title' className='title-img'/>
         </div>
-        <div className='teamContainer'>
+        <div className='matchContainer'>
           {!loading ? listMatch() : <Loading/>}
         </div>
       </section>

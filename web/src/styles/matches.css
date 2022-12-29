@@ -12,10 +12,18 @@
   width: 100%;
   background-color: #03090f;
   margin: 1rem auto;
+  border: 1px solid #AAA;
+  box-shadow: 0.5rem 0.5rem 1rem black;
 }
 
 .matchCard h4, h3{
   text-align: center;
+}
+
+.group{
+  font-size: 18px;
+  padding: 0.7rem 0;
+  text-decoration: underline;
 }
 
 .teams{
@@ -36,8 +44,17 @@
   flex: 1;
 }
 
+.matchElapsedTime{
+  font-size: 22px;
+}
+
 .matchScore{
   display: flex;
+}
+
+.matchScore h1{
+  padding-top: 1rem;
+  text-shadow: 1px 1px 5px black;
 }
 
 .teamContent div{
@@ -50,8 +67,26 @@
   width: 50%;
 }
 
+.teamContent h4{
+  font-size: 18px;
+  text-shadow: 3rem 3rem 3rem black;
+  margin: 0.5rem 0;
+}
+
 .teamContent ul{
   text-align: center;
-  list-style: none;
+  list-style-type: circle;
   padding-inline-start: 0;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.teamContent li{
+  color: whitesmoke;
+  text-shadow: 2px 2px 3px black;
+}
+
+select{
+  background-color: #03090f;
+  color: white;
 }

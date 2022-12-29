@@ -49,21 +49,41 @@ function App() {
             </ul>
           </div>
         </nav>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/matches' element={<Matches/>}/>
-          <Route path='/teams' element={<Teams/>}/>
-          <Route path='/standings' element={<Standings/>}/>
-          <Route path='*' element={<ErrorPage/>}/>
-        </Routes>
-        <footer style={{fontFamily:'qatar2022'}}>
+        <div className='container' style={{
+          marginTop: '3rem'
+        }}>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/matches' element={<Matches/>}/>
+            <Route path='/teams' element={<Teams/>}/>
+            <Route path='/standings' element={<Standings/>}/>
+            <Route path='*' element={<ErrorPage/>}/>
+          </Routes>
+        </div>
+        <footer style={{
+          fontFamily:'qatar2022',
+          borderTop: '1px solid #AAA'
+          }}>
           <div className='footer-contact'>
-            <h4>Contacto</h4>
             <ul>
               <li><a href='#'>GMAIL</a></li>
               <li><a href='#'>LINKEDIN</a></li>
               <li><a href='#'>IG</a></li>
             </ul>
+            <p style={{
+              fontSize: '12px'
+            }}>powered by <a href='https://github.com/raminmr/free-api-worldcup2022' target='_blank' style={{
+              color: '#9B072E',
+              textShadow: '1px 1px 2px black'
+            }}>WorldCup API ©</a></p>
+            <p style={{
+              fontSize: '12px',
+              textAlign: 'right',
+              marginRight: '1rem',
+              textShadow: '5px 5px 5px black'
+            }}>
+              Thiago Sosa Argañaraz
+            </p>
           </div>
         </footer>
       </div>

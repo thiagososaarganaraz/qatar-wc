@@ -51,14 +51,14 @@ function Matches() {
         selectedMatches.map((match)=>{
           return(
           <div className='matchCard' key={match.id}>
-            <h4>Group {match.group}</h4>
+            <h4 className='group'>Group {match.group}</h4>
             <div className='teams'>
               <div className='teamContent'>
                 <h4>{match.home_team_en}</h4>
                 <div className='matchLocalFlag'><img src={match.home_flag}/></div>
                 <ul className='localScorers'>
                   {
-                  match.home_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : match.home_scorers.map((scorer)=><li key={match._id}>{scorer}</li>)
+                  match.home_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.home_scorers[0].split(',')).map((scorer)=><li key={match._id}>{scorer}</li>)
                   }
                 </ul>
               </div>
@@ -72,7 +72,7 @@ function Matches() {
                 <h4>{match.away_team_en}</h4>
                 <div className='matchAwayFlag'><img src={match.away_flag}/></div>
                 <ul className='awayScorers'>
-                  {match.away_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : match.away_scorers.map((scorer)=><li key={match._id}>{scorer}</li>)}
+                  {match.away_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.away_scorers[0].split(',')).map((scorer)=><li key={match._id}>{scorer}</li>)}
                 </ul>
               </div>
             </div>
@@ -85,14 +85,14 @@ function Matches() {
         (matches.filter((match)=> match.matchday === '1')).map((match)=>{
           return(
           <div className='matchCard' key={match.id}>
-            <h4>Group {match.group}</h4>
+            <h4 className='group'>Group {match.group}</h4>
             <div className='teams'>
               <div className='teamContent'>
                 <h4>{match.home_team_en}</h4>
                 <div className='matchLocalFlag'><img src={match.home_flag}/></div>
                 <ul className='localScorers'>
                   {
-                  match.home_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : match.home_scorers.map((scorer)=><li key={match._id}>{scorer}</li>)
+                  match.home_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.home_scorers[0].split(',')).map((scorer)=><li key={match._id}>{scorer}</li>)
                   }
                 </ul>
 
@@ -107,7 +107,9 @@ function Matches() {
                 <h4>{match.away_team_en}</h4>
                 <div className='matchAwayFlag'><img src={match.away_flag}/></div>
                 <ul className='awayScorers'>
-                  {match.away_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : match.away_scorers.map((scorer)=><li key={match._id}>{scorer}</li>)}
+                  {
+                  match.away_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.away_scorers[0].split(',')).map((scorer)=><li key={match._id}>{scorer}</li>)
+                  }
                 </ul>
               </div>
             </div>
@@ -119,11 +121,16 @@ function Matches() {
   }
 
   return (
-    <div className='matchContainer'>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      fontFamily: 'Qatar2022'
+    }}>
       <nav style={{
-        display : 'flex',
+        display: 'flex',
+        backgroundColor:'#03090f',
         justifyContent: 'center',
-        margin: '1rem'
+        padding: '0.5rem 0'
       }}>
         <h3 style={{margin:'0 1rem'}}>Filtrar por dia</h3>
         <select onChange={handleChange} style={{fontFamily:'Qatar2022', fontSize: '16px'}}>
@@ -136,7 +143,9 @@ function Matches() {
           }
         </select>
       </nav>  
-      {matches ? listMatches() : <Loading/>}
+      <div className='matchContainer'>
+        {matches ? listMatches() : <Loading/>}
+      </div>
     </div>
   )
 }

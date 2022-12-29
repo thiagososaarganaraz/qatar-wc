@@ -35,6 +35,7 @@ header{
 .header-nav{
   background-color: #0A1929;
   display: flex;
+  position: fixed;
   width: 100%;
   height: auto;
   align-items: center;
@@ -200,6 +201,3 @@ footer{
   color: white;
 }
 
-.world-champions-img{
-  width: 60%;
-}
