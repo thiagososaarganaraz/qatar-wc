@@ -7,96 +7,51 @@
 }
 
 .matchCard{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   background-color: #03090f;
   margin: 1rem auto;
-  padding-bottom: 2rem;
 }
 
-.matchCard h4{
+.matchCard h4, h3{
   text-align: center;
-  margin: 1rem;
 }
 
-.group{
-  font-size: 24px;
-  text-decoration-line: underline ;
-}
-
-.matchFlags{
+.teams{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.matchTeamNames{
-  display: flex;
-  font-size: 20px;
+.teamContent{
+  flex: 2;
 }
 
-.matchTeamNames h4{
+.awayTeam{
+  flex: 2;
+}
+
+.matchCenterArea{
   flex: 1;
-  text-align: center;
-}
-
-.matchLocalFlag{
-  display: flex;
-  height: 70px;
-}
-
-.matchAwayFlag{
-  display: flex;
-  height: 70px;
-}
-
-.matchFlags div{
-  align-items: center;
-}
-
-.matchLocalFlag img{
-  margin-left: 8rem;
-  width: 100%;
-}
-
-.matchAwayFlag img{
-  margin-right: 8rem;
-  width: 100%;
 }
 
 .matchScore{
   display: flex;
 }
 
-.matchElapsedTime{
-  text-align: center;
-  font-size: 18px;
-}
-
-.matchScorers{
-  display: flex;
-}
-
-.matchScorers ul{
-  flex: 1;
-  font-size: 13px;
-  color: #DDD;
-}
-
-.matchScorers ul li{
-  margin: 1rem auto;
-  width: 60%;
-  list-style-type: circle;
-}
-
-.localScorers li{
+.teamContent div{
+  height: 90px;
   text-align: center;
 }
 
-.matchCenterArea h1{
-  padding: 0 2rem;
+.teamContent div img{
+  height: 100%;
+  width: 50%;
 }
 
-.matchCenterArea :nth-child(2){
-  padding: 0;
-}
-
-.awayScorers li{
-  margin-right: 100%;
+.teamContent ul{
+  text-align: center;
+  list-style: none;
+  padding-inline-start: 0;
 }
