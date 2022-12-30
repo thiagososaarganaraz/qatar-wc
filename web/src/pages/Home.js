@@ -34,7 +34,7 @@ function Home() {
           <div className='matchLocalFlag'><img src={match.home_flag}/></div>
           <ul className='localScorers'>
             {
-            match.home_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.home_scorers[0].split(',')).map((scorer)=><li key={match._id}>{scorer}</li>)
+            match.home_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.home_scorers[0].split(',')).map((scorer)=><li key={scorer+match._id}>{scorer}</li>)
             }
           </ul>
 
@@ -50,7 +50,7 @@ function Home() {
           <div className='matchAwayFlag'><img src={match.away_flag}/></div>
           <ul className='awayScorers'>
             {
-            match.away_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.away_scorers[0].split(',')).map((scorer)=><li key={match._id}>{scorer}</li>)
+            match.away_scorers[0] == 'null' ? <li style={{listStyle:'none'}}></li> : (match.away_scorers[0].split(',')).map((scorer)=><li key={scorer+match.id}>{scorer}</li>)
             }
           </ul>
         </div>

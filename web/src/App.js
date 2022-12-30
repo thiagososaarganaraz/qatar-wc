@@ -50,7 +50,7 @@ function App() {
           </div>
         </nav>
         <div className='container' style={{
-          marginTop: '3rem'
+          margin: '3rem 0'
         }}>
           <Routes>
             <Route path='/' element={<Home/>}/>
@@ -65,10 +65,12 @@ function App() {
           borderTop: '1px solid #AAA'
           }}>
           <div className='footer-contact'>
+            <h3>Contact</h3>
+            <h5>Do you like what you see? Let's work together!</h5>
             <ul>
-              <li><a href='#'>GMAIL</a></li>
-              <li><a href='#'>LINKEDIN</a></li>
-              <li><a href='#'>IG</a></li>
+              <li><a href="mailto:?cc=thiagososaarganaraz@gmail.com?subject=Let's%20work%20together!?&body=Hi!%20I'm%20interested%20in%20working%20with%20you!" target="_blank"><i className="fa-solid fa-inbox"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/thiago-sosa-arga%C3%B1araz-b26034214/"><i className="fa-brands fa-linkedin"></i></a></li>
+              <li><a href="https://github.com/thiaguetas" target="_blank"><i className="fa-brands fa-github"></i></a></li>
             </ul>
             <p style={{
               fontSize: '12px'
