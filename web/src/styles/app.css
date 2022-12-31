@@ -73,6 +73,7 @@ header a{
   font-family: "Qatar2022";
   font-weight: bold;
   color: #9B072E;
+  text-shadow: 1px 1px 1px black;
 }
 
 .header-nav-right a:hover{

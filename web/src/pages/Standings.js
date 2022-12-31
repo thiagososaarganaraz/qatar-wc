@@ -5,7 +5,6 @@ import '../styles/standings.css'
 
 function Standings() {
 
-  let data = []
   const [standings, setStandings] = useState(null);
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -49,7 +48,7 @@ function Standings() {
       return(
       selected.map((e)=>{
         return (
-          <div style={{margin: '3rem'}} key={`div${e.group}`}>
+          <div className='standingCard' key={`div${e.group}`}>
             <h3 style={{textAlign: 'center', margin: '5px'}}>{`Grupo ${e.group}`}</h3>
             <table key={e.group}>
               <thead>
@@ -93,7 +92,7 @@ function Standings() {
       return(
         standings.map((e)=>{
           return (
-            <div style={{margin: '3rem'}} key={`div${e.group}`}>
+            <div className='standingCard' key={`div${e.group}`}>
               <h3 style={{textAlign: 'center', margin: '5px'}}>{`Grupo ${e.group}`}</h3>
               <table key={e.group}>
                 <thead>

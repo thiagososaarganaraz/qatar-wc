@@ -19,3 +19,11 @@ tbody td{
 tbody tr :first-child{
     text-align: initial;
 }
+
+.standingCard{
+    margin: 3rem;
+    background: #03090f;
+    padding: 1rem;
+    border: 1px solid #AAA;
+    box-shadow: 0.5rem 0.5rem 1rem black;
+}
