@@ -3,17 +3,17 @@
 }
 
 .loading span{
-    font-family: Qatar2022;
-    width: 1em;
-    height: 1em;
-    margin: 1em 5px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    animation-name: dots;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  font-family: Qatar2022;
+  width: 1em;
+  height: 1em;
+  margin: 1em 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  animation-name: dots;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .loading span:nth-child(2){
@@ -31,4 +31,16 @@
         opacity: 0;
         transform: scale(0.5) translateY(10px);
     }
+}
+
+@media (max-width: 500px) {
+  .loading h2{
+    font-size: 18px;
+  }
+
+  .loading span{
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.5em auto;
+  }
 }

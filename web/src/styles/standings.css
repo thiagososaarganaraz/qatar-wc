@@ -1,3 +1,7 @@
+.standingsContainer{
+  margin: 0 auto;
+}
+
 table th, td{
     padding: 5px;
 }
@@ -20,10 +24,44 @@ tbody tr :first-child{
     text-align: initial;
 }
 
+.standings-nav{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color:#03090f;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
 .standingCard{
     margin: 3rem;
     background: #03090f;
     padding: 1rem;
     border: 1px solid #AAA;
     box-shadow: 0.5rem 0.5rem 1rem black;
+}
+
+@media (max-width: 800px) {
+  .standingCard table{
+    margin: 0 auto;
+    width: 99%;
+  }
+}
+
+@media (max-width: 500px){
+  .standingCard{
+    margin: 0;
+  }
+
+  .standingCard h3{
+    font-size: 20px;
+  }
+
+  .standingCard table{
+    font-size: 14px;
+  }
+
+  .standingCard img{
+    width: 15%;
+  }
 }

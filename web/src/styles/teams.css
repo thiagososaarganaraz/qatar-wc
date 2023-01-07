@@ -14,16 +14,53 @@ h1{
   padding: 2rem;
 }
 
-.teamContainer{
+.teams-nav{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  background-color:#03090f;
+  justify-content: center;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.container-all{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 80%;
   margin: 0 auto;
 }
 
+.container-filtered{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container-team{
+  display: flex;
+  justify-content: center;
+}
+
+.container-all h2{
+  text-align: center;
+}
+
+.showBtn{
+  font-size: 20px;
+  margin: 0 1rem;
+  background-color: #03090F;
+  color: white;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
 .teamCard{
   text-align: center;
   padding-top: 1rem;
+  flex: 1;
 }
 
 .teamName{
@@ -48,4 +85,63 @@ h1{
 .teamGroup{
   text-align: center;
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  .container-all{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container-team{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container-team{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .teamCard{
+    justify-content: center;
+    text-align: center;
+    margin: 1rem 0;
+    
+  }
+
+  .teamFlag{
+    width: 100%;
+    height: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .teams-nav{
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .teams-nav select{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: 3rem;
+    border: none;
+  }
+
+  .teams-nav button{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: 3rem;
+  }
+
+  .teamFlag img{
+    width: 70%;
+  }
 }

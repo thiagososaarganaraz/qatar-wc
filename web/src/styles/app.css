@@ -212,3 +212,47 @@ footer{
   font-size: 24px;
 }
 
+.btnMenu{
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .header-nav ul li{
+    margin: auto 1rem;
+  }
+}
+
+@media (max-width: 600px){
+  .header-nav ul li{
+    display: none;
+  }
+  
+  .open-nav{
+    display: block;
+    height: 100%;
+
+  }
+
+  .btnMenu{
+    display: block;
+    background-color: #081e35;
+    color: white;
+    border: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .header-nav-right{
+    flex: 1;
+  }
+}
+
+@media (max-width: 500px){
+  .footer-contact ul{
+    justify-content: space-around ;
+  }
+
+  .footer-contact ul i{
+    font-size: 32px;
+  }
+}

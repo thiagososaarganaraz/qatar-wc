@@ -90,3 +90,65 @@ select{
   background-color: #03090f;
   color: white;
 }
+
+@media (max-width: 1000px) {
+  .matchContainer{
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 800px){
+  .title{
+    display: none
+  }
+  .matchCenterArea h1{
+    padding: 1rem;
+  }
+
+  .matchCenterArea{
+    align-self: center;
+  }
+
+  .matchScore{
+    justify-content: center;
+  }
+
+  .teamContent div img{
+    height: 100%;
+    width: 50%;
+  }
+
+  .matchCenterArea h3{
+    font-size: 18px;
+  }
+
+  .teamContent ul{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .matchContainer{
+    width: 99%;
+  }
+
+  .matchAwayFlag img, .matchLocalFlag img{
+    height: 50%;
+  }
+
+  
+}
+
+@media (max-width: 400px) {
+  .teamContent div img{
+    height: 100%;
+    width: 60%;
+  }
+  .teamContent div{
+    height: 40px;
+  }
+  .teamContent ul{
+    text-align: justify;
+  }
+}
