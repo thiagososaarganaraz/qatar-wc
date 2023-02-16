@@ -9,6 +9,7 @@ function Teams() {
   const [teams, setTeams] = useState(null);
   const [selectedTeams, setSelectedTeams] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     //Pido los datos al renderizar por primera vez
@@ -24,6 +25,7 @@ function Teams() {
       } catch (error) {
         console.log(error);
         setLoading(false);
+        setError(true);
       }
     }
     getData();
@@ -66,7 +68,7 @@ function Teams() {
       //De lo contrario, me muestra todos los equipos
       return (
         <div className="container-all">
-          {teams.map((team) => {
+          {teams?.map((team) => {
             return (
               <div className="teamCard" key={team.id} style={noFlag(team.flag)}>
                 <a key={team.id} className="teamName">
@@ -139,6 +141,7 @@ function Teams() {
       ) : (
         <Loading />
       )}
+      {error ? <h1>No se pudo conectar con el servidor.</h1> : <></>}
     </div>
   );
 }

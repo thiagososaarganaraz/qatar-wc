@@ -7,6 +7,7 @@ function Standings() {
   const [standings, setStandings] = useState(null);
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     //Pido los datos al renderizar por primera vez
@@ -19,6 +20,7 @@ function Standings() {
       } catch (error) {
         console.log(error.message);
         setLoading(false);
+        setError(true);
       }
     }
     getData();
@@ -30,7 +32,7 @@ function Standings() {
   //Algoritmo para ordenar las tablas por puntos
   let sorted = [];
   standings &&
-    standings.map((stand) =>
+    standings?.map((stand) =>
       sorted.push(
         stand.teams.sort((a, b) => {
           if (a.pts > b.pts) return -1;
@@ -44,7 +46,7 @@ function Standings() {
   const listStandings = () => {
     //Si existe un filtro, entonces listar tablas con ese filtro
     if (selected) {
-      return selected.map((e) => {
+      return selected?.map((e) => {
         return (
           <div className="standingCard" key={`div${e.group}`}>
             <h3
@@ -87,7 +89,7 @@ function Standings() {
       });
     } else {
       //De lo contrario, listar todas las tablas :)
-      return standings.map((e) => {
+      return standings?.map((e) => {
         return (
           <div className="standingCard" key={`div${e.group}`}>
             <h3
@@ -149,7 +151,7 @@ function Standings() {
           }}
         >
           {!loading ? (
-            standings.map((e) => {
+            standings?.map((e) => {
               return <option key={e.group}>{e.group}</option>;
             })
           ) : (
@@ -172,6 +174,7 @@ function Standings() {
       </nav>
       <div className="standingsContainer">
         {!loading ? listStandings() : <Loading />}
+        {error ? <h1>No se pudo conectar con el servidor.</h1> : <></>}
       </div>
     </div>
   );
